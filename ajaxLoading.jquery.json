@@ -1,0 +1,29 @@
+{
+    "name": "ajaxLoading",
+    "title": "ajaxLoading",
+    "description": "Bind an indicator for jquery ajax loading process.",
+    "keywords": [
+        "ajax",
+        "indicator",
+        "loading"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "sayume and other contributors"
+    },
+    "maintainers": [
+        {
+            "name": "sayume",
+            "email": "sakula.yume@gmail.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}

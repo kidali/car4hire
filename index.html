@@ -1,0 +1,386 @@
+<!DOCTYPE html> 
+<html class="ui-mobile-nosupport-boxshadow ui-mobile portrait undefined max-width-320px max-width-480px max-width-768px max-width-1024px">
+<head>
+<link rel="shortcut icon" href="favicon.ico" >
+
+<link rel="apple-touch-startup-image" href="htt://localhost/myprojects/mobileapphire/mobileapp/splash.bmp">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta charset="utf-8">
+<title>car 4 hire</title>
+<link href="jquery.mobile-1.3.2.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.3.2.min.js"type="text/javascript"></script>
+<script type="text/javascript" src="src/jquery.ajaxLoading.js"></script>
+
+	
+	
+<style type="text/css">
+img{
+   border-radius:30px;	
+   
+}
+@media all and (min-width: 36em){
+	.main { float: left; width:60%; }
+	.sidebar { float: left; width:40%; }
+}
+
+/* Second breakpoint at 800px */
+/* Adjusts column proportions, tweaks base H1 */
+@media all and (min-width: 50em){
+	.main { width:70%; }
+	.sidebar { width:30%; }
+
+	/* You can also tweak any other styles in a breakpoint */
+	h1 { color: blue; font-size:1.2em }
+}
+
+
+
+
+a{
+text-decoration:none;	
+}
+
+p{
+
+
+}
+
+label{
+ font-family:Nexa Light;
+}
+
+h4{
+
+}
+
+#b{
+width:300px;
+height:150px;
+border-radius:10px;
+background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #45484d 0%,#000000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+</style>
+
+</head> 
+
+<body> 
+
+<script type="text/javascript">
+
+</script>
+<script type="text/javascript">
+	$(function(){
+
+		$.fn.ajaxLoading().register([
+			{
+				element:'#test',
+				type:'image',
+				src:'img/indicator.gif',
+				url:['http://localhost:3000/','http://localhost:3000/json']
+			}
+		]);
+
+		$.fn.ajaxLoading({
+			onStatistics:true
+		});
+
+		$('.btnStartLoading').on('click',function(){
+			$.ajax({
+			    url:"http://localhost:3000/"
+		    });
+		    $.ajax({
+		    	url:"http://localhost:3000/json",
+		    	dataType:'json'
+		    }).done(function(){
+		    	alert($.fn.ajaxLoading().getStatistics()[0].timeCost);
+		    	alert($.fn.ajaxLoading().getStatistics()[0].times);
+		    });
+		});
+
+
+	});
+	</script>
+	
+<div id="test"></div>
+<div data-role="page" id="page" data-theme="a" >
+	<div data-role="header">
+		<h1 style="font-family:Gabriela">Car4Hire</h1>
+	</div>
+   <div data-role="content">
+    
+     <p><center>
+	    <img src="img/c2.png"/>
+	 </center></p>
+       
+   
+   <div data-role="content" id="container">
+    <div id="b">
+	<center>
+	 Super Automotive<hr/><span style="padding:1px; font-family:Nexa Light; font-size:13px;">
+	 In need of a car for a special occasion <br/>like wedding!! No stress of purchasing it when<br/> you<br/> can hire it at a reasonable
+	 price,;you are <br/>welcome to try our new service.</span>
+	</center>
+	
+   </div>
+   </div>
+		
+	</div>
+	<div data-role="footer">
+  		<nav data-role="navbar">
+<ul>
+<li><a href="#page2a" class="btnStartLoading"class="ui-btn-active" data-icon="gear"><label>Gallery</label></a></li>
+<li><a href="#page5" class="btnStartLoading" data-icon="info"></label>About</label></label></a></li>
+<li><a href="#page4" class="btnStartLoading" data-icon="plus"><label>Contact</label></a></li>
+
+</ul>
+</nav>
+	  </div>
+</div>
+</div>
+<div id="test"></div>
+
+<div data-role="page" id="page2r" data-theme="a">
+	<div data-role="header" data-rel="back" data-icon="back" >
+		<h1 style="font-family:Gabriela">Subru Hombre</h1>
+      <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="gear" data-theme="e">Actions</a>
+<div data-role="popup" id="popupMenu" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="Min-width:210px;" >
+            <li data-role="divider" data-theme="e">Choose an action</li>
+            <li><a href="#page2c" class="btnStartLoading">Back</a></li>
+           
+            <li><a href="#page4" data-transition="slide" data-inline="true" class="btnStartLoading">Contact</a></li>
+        </ul>
+</div>
+	</div>
+	<div data-role="content">	
+	
+		<a href="#popupParis" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/bmw-thumb.jpg" alt="Paris, France" style="width:30%"></a>
+<a href="#popupSydney" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/landrover-thumb.jpg" alt="Sydney, Australia" style="width:30%"></a>
+<a href="#popupNYC" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/tesla-thumb.jpg" alt="New York, USA" style="width:30%"></a>
+<a href="#popupc6" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/c6-thumb.png" alt="Paris, France" style="width:30%"></a>
+<a href="#popupin1" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/in1-thumb.png" alt="Paris, France" style="width:30%"></a>
+<a href="#popupin2" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="images/in2.png" alt="Paris, France" style="width:30%"></a>
+
+
+<div data-role="popup" id="popupParis" data-overlay-theme="a" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a"  data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="images/bmw.jpg" style="max-height:512px;" alt="Paris, France">
+<a href="#page2r"><button data-rel="back" data-icon="delete" >close</button></a>
+	</div>
+<div data-role="popup" id="popupSydney" data-overlay-theme="a" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a"  data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="images/landrover.jpg" style="max-height:512px;" alt="Sydney, Australia">
+<a href="#page2r"><button data-rel="back" data-icon="delete" >close</button></a>
+	</div>
+<div data-role="popup" id="popupNYC" data-overlay-theme="a" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a"  data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="images/tesla.jpg" style="max-height:512px;" alt="New York, USA">
+<a href="#page2r"><button data-rel="back" data-icon="delete" >close</button></a>
+	</div>
+	<div data-role="popup" id="popupc6" data-overlay-theme="a" data-icon="right" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a"  data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="images/c6.png" style="max-height:512px;" alt="New York, USA">
+<a href="#page2r"><button data-rel="back" data-icon="delete" >close</button></a>
+	</div>
+	<div data-role="popup" id="popupin1" data-overlay-theme="a" data-icon="right" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a"  data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="images/in1.png" style="max-height:512px;" alt="New York, USA">
+<a href="#page2r"><button data-rel="back" data-icon="delete" >close</button></a>
+	</div>
+	<div data-role="popup" id="popupin2" data-overlay-theme="a" data-icon="right" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a"  data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="images/in2.jpg" style="max-height:512px;" alt="New York, USA">
+<a href="#page2r"><button data-rel="back" data-icon="delete" >close</button></a>
+	</div>
+	<img src="img/isuzu.png">
+</div>
+   	<div data-role="footer">
+		<h1 style="font-family:Gabriela">Demo app by Kidali</h1>
+	</div>
+</div>
+
+<div data-role="page" id="page2c" data-theme="a">
+	<div data-role="header" data-rel="back" data-icon="back" >
+		<h1 style="font-family:Gabriela">Isuzu Hombre</h1>
+      <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="gear" data-theme="e">Actions</a>
+<div data-role="popup" id="popupMenu" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" >
+            <li data-role="divider" data-theme="e">Choose an action</li>
+            <li><a href="#page" class="btnStartLoading">Back</a></li>
+            <li><a href="#page2r" class="btnStartLoading">More Images</a></li>
+            <li><a href="#page4" data-transition="slide" data-inline="true" class="btnStartLoading">Contact</a></li>
+        </ul>
+</div>
+	</div>
+	<div data-role="content">
+	
+		<img src="img/c6.png"><br/>
+<b><span style="color:yellow">Body style:</span></b> SUV<br/>
+<b><span style="color:yellow">MPG: </span></b>Up to 20 city, 23 highway<br/>
+<b><span style="color:yellow">Horsepower:</span> </b>130 HP to 205 HP<br/>
+<b><span style="color:yellow">Engine size:</span></b> 2.2L, 3.2L<br/>
+<b><span style="color:yellow">Available trims:</span></b> S 2.2L Soft Top, S 2.2L Hard Top<br/>
+<b><span style="color:yellow">Dealers:</span></b> Subru Holdings<br/>
+		<div data-role="controlgroup" data-type="horizontal">
+<a href="0773470182" data-role="button">Call</a>
+<a href="#popupBasic" data-rel="popup" data-inline="true" data-role="button" data-transition="pop">Map</a>
+<a href="#price" data-role="button">Hire 4:<span style="color:red">$200</span></a>
+</div>
+
+<div data-role="popup"  id="popupBasic" dat-rel="back">
+    <p>
+	<a href="#page2c"><button data-rel="back" data-icon="delete" >close</button></a>
+	<iframe width="250" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?t=h&amp;cid=3407106208997338956&amp;q=Bush+Rover&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;ll=-1.322208,36.705492&amp;spn=0.000926,0.001235&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?t=h&amp;cid=3407106208997338956&amp;q=Bush+Rover&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;ll=-1.322208,36.705492&amp;spn=0.000926,0.001235&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	</p>
+</div>
+</div>
+   	<div data-role="footer">
+		<h1 style="font-family:Gabriela">&copy 2014</h1>
+	</div>
+</div>
+
+<div data-role="page" id="page2a" data-theme="a">
+	<div data-role="header" data-rel="back" data-icon="back" >
+		<h1 style="font-family:Gabriela">Cars</h1>
+      <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="gear" data-theme="e">Actions</a>
+<div data-role="popup" id="popupMenu" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" >
+            <li data-role="divider" data-theme="e">Choose an action</li>
+            <li><a href="#page" class="btnStartLoading">Back</a></li>
+            <li><a href="#page5" class="btnStartLoading">Public Notice</a></li>
+            <li><a href="#page4" data-transition="slide" data-inline="true" class="btnStartLoading">Contact</a></li>
+        </ul>
+</div>
+	</div>
+	<div data-role="content">	
+	<ul data-role="listview">
+    <li><a href="#page2c"><img src="img/c6.png"><span style="font-family:Nexa Light; color:yellow;">Isuzu Hombre</span><hr/><span style="font-family:Gabriela">Subru Holdings</a></li>
+	<li><a href="#pop1"  data-rel="popup"  data-transition="pop"><img src="img/c7.png"><span style="font-family:Nexa Light; color:yellow;">Isuzu Hilux</span><hr/><span style="font-family:Gabriela">Gecko Holdings</a></li>
+     <li><a href="#pop1"  data-rel="popup"  data-transition="pop"><img src="img/c8.png"><span style="font-family:Nexa Light; color:yellow;">Honda Black</span><hr/><span style="font-family:Gabriela">Sparks Holdings</a></li>
+      <li><a href="#pop1"  data-rel="popup"  data-transition="pop"><img src="img/c4.png"><span style="font-family:Nexa Light; color:yellow;">Agera Avatar</span><hr/><span style="font-family:Gabriela">Mint Holdings</a></li>
+    </ul>
+	</div>
+	<div data-role="popup"  id="pop1">
+    <p>
+	<a href="#page2a"><button data-rel="back" data-icon="delete" >close</button></a>
+	 <span style="color:red">Not authorized by kidali</li></span>
+	</p>
+</div>
+   	<div data-role="footer">
+		<h4>&copy 2014</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3" data-theme="a">
+	<div data-role="header">
+	<h1 style="font-family:Gabriela">Report</h1>
+    <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="gear" data-theme="e">Actions</a>
+<div data-role="popup" id="popupMenu" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" >
+            <li data-role="divider" data-theme="e">Choose an action</li>
+            <li><a href="#page" class="btnStartLoading">Back</a></li>
+            <li><a href="#page5" class="btnStartLoading">Public Notice</a></li>
+            <li><a href="#page4" data-transition="slide" data-inline="true" class="btnStartLoading">Contact</a></li>
+        </ul>
+</div>
+	</div>
+	<div data-role="content">	
+	<h4 style="font-family:Nexa Light; color:red;">About</h4>
+    <p>This System is tailored on <sup>&copy;</sup>2014 by kidali kevin for the purpose for helping the government and people of kenya to curb the high rate of crime which is being experience.</p><hr>
+    <h4 style="font-family:Nexa Light; color:red;">How to use</h4>
+    <p>Simply, if you see crime committed around you that can affect you or people around you, go to the report crime crime, choose the nature of crime on report crime scene menu and get in touch with us and we shall respond as soon as possible</p><hr>
+    <h4 style="font-family:Nexa Light; color:red;">Public Notice</h4>
+    <p>This section will contain information for the public in regard to what is happening around the country in regard to crime and other issues related</p><hr>
+    <h4 style="font-family:Nexa Light; color:red;">Other Contact</h4>
+    <p>You can decide to get in touch with us through our contact section in case of different issue or updates or inquiry</p>
+	</div>
+	<div data-role="footer">
+		<h4 style="font-family:Gabriela; color:white;">&copy kidali</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4" data-theme="a" data-ajax="true">
+	<div data-role="header">
+		<h1 style="font-family:Gabriela">Contact</h1>
+         <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="gear" data-theme="e">Actions</a>
+<div data-role="popup" id="popupMenu" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" >
+            <li data-role="divider" data-theme="e">Choose an action</li>
+            <li><a href="#page" data-icon="home" class="btnStartLoading">Home</a></li>
+           
+            
+        </ul>
+</div>
+	</div>
+	<div data-role="content">	
+		<a href="#" data-role="button" data-icon="Check"><img src="img/twiter.png">Get us on twitter</a>
+        <p>Or</p>
+        <a href="#" data-role="button" data-icon="check"><img src="img/facebook.png">Get us on facebook</a>
+        <p>Or</p>
+        <a href="#mypanel" data-role="button" data-icon="arrow-l"><img src="img/email.png">Drop us an email</a>
+        <p>Or</p><center>
+        <h3 style="font-family:Gabriela;"><b>Telephone:</b>09384-455-45</h3>
+        <h3 style="font-family:Gabriela;"><b>Cellphone:</b>(254)77-494-495</h3>
+        </center>
+	</div>
+    <div data-role="panel" id="mypanel">
+    <div data-role="header">
+		<h5 style="font-family:Gabriela">Send Email</h5>
+	</div>
+	<form name="report" method ="" action="">
+    <label>Full Names</label>
+    <input type="text" name="fullname">
+    <label>Phone Number</label>
+    <input type="text" name="contact">
+    <label>Subject</label>
+    <input type="text" name="subject">
+    <label>Message</label>
+    <textarea name="message"></textarea>
+    <input type="submit" name="send2" value="Send">
+     <input type="reset" name="send" value="Cancel">
+	 </form>
+    <a href="#page3" data-rel="close" data-role="button" data-icon="delete" data-theme="e">Close panel</a>
+    
+</div>
+	<div data-role="footer">
+		<h4 style="font-family:Gabriela">&copy kidali</h4>
+	</div>
+</div>
+<div data-role="page" id="page5" data-theme="a">
+
+<div data-role="header">
+   <h1 style="font-family:Gabriela">About</h1>
+   <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="back" data-theme="e">Actions</a>
+<div data-role="popup" id="popupMenu" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" >
+            <li data-role="divider" data-theme="e">Choose an action</li>
+            <li><a href="#page" data-icon="home" class="btnStartLoading">Home</a></li>
+            <li><a href="#page4" data-icon="info" class="btnStartLoading">Contact</a></li>
+            
+        </ul>
+
+</div>
+</div>
+    <div data-role="content">
+      
+	   <img src="img/kevin.jpg" width="300" height="200"/>
+	   <center>
+       <span style="font-family:Nexa Light">My name is Kevin kidali, JKUAT BON FIDEI, a web programmer in passion,
+	   this app is just a simple demo of my piece of work, and under this segment is where info in regard to the system resides.
+	   </span>
+	   </center>
+    
+</div>
+<div data-role="footer">
+  <h1 style="font-family:Gabriela">&copy kidali</h1>
+</div>
+
+</div>
+
+</body>
+</html>
